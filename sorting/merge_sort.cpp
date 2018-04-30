@@ -48,12 +48,9 @@ void divide(int array[], int num){
 	for(int i=0; i<num-mid; i++){
 		array2[i] = array[mid+i];
 	}
-	print(array1, mid);
 	divide(array1, mid);
-	print(array2, num-mid);
 	divide(array2, num-mid);
 	conquer(array1, mid, array2, num-mid, array);
-	print(array, num);
 }
 
 void conquer(int array1[], int num1, int array2[], int num2, int array[]){
@@ -72,7 +69,7 @@ void conquer(int array1[], int num1, int array2[], int num2, int array[]){
 			continue;
 		}
 		
-		if(array1[pos1]<array[pos2]){
+		if(array1[pos1]<array2[pos2]){
 			array[i] = array1[pos1];
 			pos1++;
 		}else{
