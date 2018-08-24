@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1530624686 source:c:\users\vip\documents\github\cpp\multifile programs\verylong\app.cpp
+	"verylong.h"
+
+1530622011 c:\users\vip\documents\github\cpp\multifile programs\verylong\verylong.h
+	<iostream>
+	<string.h>
+	<stdlib.h>
+
+1530624522 source:c:\users\vip\documents\github\cpp\multifile programs\verylong\verylong.cpp
+	"verylong.h"
+

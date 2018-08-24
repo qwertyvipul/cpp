@@ -1,0 +1,41 @@
+int someVar; //declaration and definition
+extern int someVar; //declaration only
+------------------------------------------
+
+//file A
+int globalVar; //definition in file A
+
+//file B
+int globalVar; //illegal: same definition in file B
+------------------------------------------
+
+//file A
+int globalVar; //definition in file A
+
+//file B
+globalVar = 3; //illegal: globalVar is unknown
+------------------------------------------
+
+//file A
+int globalVar; //definition in file A
+
+//file B
+extern int globalVar; //declaration
+globalVar = 3; //This is gonna work
+------------------------------------------
+
+//file A
+static int globalVar; //definition only visible in file A
+
+//file B
+static int globalVar; //definition only visible in file B
+------------------------------------------
+
+//file A
+extern const int conVar2 = 99 //definition
+
+//file B
+extern const int conVar2; //definition
+-> Here file B has access to the const variable in file A.
+-> The compiler can tell the difference between a const definition
+-> and declaration by seeing where the variable is initialized
